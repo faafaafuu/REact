@@ -1,16 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 
-import "./styles.css";
+function ToDoTitle() {
+  return <h1>Title</h1>;
+}
 
-function App() {
+function TitleList() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <ul>
+      <li>ToDoTitle()</li>
+      <li>
+        <ToDoTitle />
+      </li>
+      <li>
+        <ToDoTitle />
+      </li>
+      <li>
+        <ToDoTitle />
+      </li>
+    </ul>
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+render(<TitleList />, document.getElementById("root"));
